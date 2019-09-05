@@ -10,16 +10,19 @@ class Linked_list(object):
     def __init__(self):
         self.head = None
         self.tail = None
+        self.list_len = 0
 
 
     def add_node(self, value):
         if self.head == None:
             self.head = Node(value)
             self.tail = self.head
+            self.list_len = 1
 
         else:
             self.tail.next = Node(value)
             self.tail = self.tail.next
+            self.list_len += 1
 
 
     def iterate_linked_list(self):
@@ -49,6 +52,8 @@ class Linked_list(object):
                     prev_node.next = curr_node.next
                     curr_node.next = None
 
+                self.list_len -= 1
+
                 break
 
             else:
@@ -69,12 +74,10 @@ class Linked_list(object):
                     visitor_prev.next = visitor.next
                     visitor.next = None
                     visitor = visitor_prev.next
+                    self.list_len -= 1
 
                 else:
                     visitor_prev = visitor
                     visitor = visitor.next
 
             curr_node = curr_node.next
-
-
-        self.iterate_linked_list()

@@ -30,6 +30,32 @@ class Linked_list(object):
             current_node = current_node.next
 
 
+    def delete_node(self, value):
+        if self.head == value:
+            aux = self.head.net
+            self.head.next = None
+            self.head = aux
+
+        prev_node = self.head
+        curr_node = self.head.next
+
+        while curr_node:
+            if curr_node.value == value:
+                if not curr_node.next:
+                    self.tail = prev_node
+                    self.tail.next = None
+            
+                else:
+                    prev_node = curr_node
+                    curr_node = curr_node.next
+
+                break
+
+            else:
+                prev_node = curr_node
+                curr_node = curr_node.next
+
+
     def delete_duplicates(self):
         curr_node = self.head
 

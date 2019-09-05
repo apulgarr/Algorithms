@@ -31,8 +31,8 @@ class Linked_list(object):
 
 
     def delete_node(self, value):
-        if self.head == value:
-            aux = self.head.net
+        if self.head.value == value:
+            aux = self.head.next
             self.head.next = None
             self.head = aux
 
@@ -44,10 +44,10 @@ class Linked_list(object):
                 if not curr_node.next:
                     self.tail = prev_node
                     self.tail.next = None
-            
+    
                 else:
-                    prev_node = curr_node
-                    curr_node = curr_node.next
+                    prev_node.next = curr_node.next
+                    curr_node.next = None
 
                 break
 
@@ -78,3 +78,15 @@ class Linked_list(object):
 
 
         self.iterate_linked_list()
+
+
+l = Linked_list()
+l.add_node(2)
+l.add_node(3)
+l.add_node(4)
+l.add_node(8)
+l.add_node(4)
+l.add_node(10)
+l.delete_node(8)
+#l.delete_duplicates()
+l.iterate_linked_list()

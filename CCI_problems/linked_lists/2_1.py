@@ -32,7 +32,7 @@ def delete_duplicates_optimized(node):
     p_node = None
 
     while curr_node:
-        if curr_node.value not in no_duplicates.keys():
+        if curr_node.value not in no_duplicates:
             no_duplicates[curr_node.value] = True
             p_node = curr_node
             curr_node = curr_node.next

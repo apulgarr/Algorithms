@@ -1,4 +1,4 @@
-#Delete duplicates: Delete the elements duplicate in a linked list
+#Delete duplicates: Remove duplicates from an unsorted linked list
 
 #Time complexity: O(n^2)
 #Brute force solution with pointers

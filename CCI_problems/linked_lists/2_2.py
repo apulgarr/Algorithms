@@ -1,3 +1,5 @@
+from linked_list import Linked_list
+
 #Return kth to last: Find the Kth element into the list and then return from kth to last
 
 #Time complexity: O(n)
@@ -6,7 +8,7 @@ def find_kth_node(node, k):
     if k == 1:
         return node
 
-    while node:
+    while k - 1 > 0:
         node = node.next
         k -= 1
 

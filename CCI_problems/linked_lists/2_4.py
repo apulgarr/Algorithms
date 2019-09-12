@@ -2,6 +2,8 @@ from linked_list import *
 
 #rotation: all nodes less than x come before all nodes greater than or equal to x
 
+#Time complexity: O(n)
+
 def rotation(pivot, node_head):
     aux_node = node_head
     p_node = None

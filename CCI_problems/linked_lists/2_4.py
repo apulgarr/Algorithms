@@ -22,16 +22,16 @@ def rotation(pivot, node_head):
 
 
             if not p_node:
-                aux_node = aux_node.next
                 node_head = node_head.next
 
             else:
                 p_node.next = aux_node.next
-                aux_node = aux_node.next
 
         else:
             p_node = aux_node
-            aux_node = aux_node.next
+
+        aux_node = aux_noded.next
+
 
     if not new_linked_list:
         r_new_linked = node_head

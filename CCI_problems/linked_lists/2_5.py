@@ -1,13 +1,8 @@
+from linked_list import *
+
 #Given two linked lists, sum their values and return the result node
 
 #Time complexity: O(max(m,n))
-
-
-class Node(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
 
 def add_two_numbers(l1, l2):
     sum = 0
@@ -15,11 +10,11 @@ def add_two_numbers(l1, l2):
 
     while l1 or l2 or sum:
         if l1:
-            sum += l1.val
+            sum += l1.value
             l1 = l1.next
 
         if l2:
-            sum += l2.val
+            sum += l2.value
             l2 = l2.next
 
         if l_aux:
